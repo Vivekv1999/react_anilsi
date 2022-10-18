@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div>
       <ul className='setli'>
-        <Link to="/Home" style={{ backgroundColor: "grey", borderRadius: "5px", margin: "0 9px" }}>home</Link>
+        <Link to="/" style={{ backgroundColor: "grey", borderRadius: "5px", margin: "0 9px" }}>home</Link>
         <li style={{ backgroundColor: "grey", borderRadius: "5px", margin: "0 9px" }} >conatct</li>
         <li style={{ backgroundColor: "grey", borderRadius: "5px", margin: "0 9px" }} >
           <Link to="/about">
@@ -17,6 +17,7 @@ export default function Navbar() {
         <Link to="/Contact" style={{ backgroundColor: "grey", borderRadius: "5px", margin: "0 9px" }} >Contact us</Link>
         <li style={{ backgroundColor: "grey", borderRadius: "5px", margin: "0 9px" }} >peter</li>
         <Link to="/Searchparamsss" style={{ backgroundColor: "grey", borderRadius: "5px", margin: "0 9px" }} >Searchparams</Link>
+        <Link to="/Login" style={{ backgroundColor: "grey", borderRadius: "5px", margin: "0 9px" }} >Login</Link>
       </ul>
     </div >
   )

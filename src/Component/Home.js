@@ -1,9 +1,12 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 
 export default function Home() {
     const navigate=useNavigate()
+    const locationn=useLocation()
+    console.log(locationn);
+    
   return (
     <div>
         <div className="container" style={{justifyContent:"center"}}>

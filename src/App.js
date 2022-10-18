@@ -7,6 +7,8 @@ import Home from './Component/Home';
 import Contact from './Component/Contact';
 import Company from './Component/L-55-NestedROUTING/Company';
 import Otherbusi from './Component/L-55-NestedROUTING/Otherbusi';
+import Login from './Component/Login';
+import Protected from './Component/Protected';
 
 
 function App() {
@@ -15,8 +17,10 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route  path='/about'  element={<About/>}  />
-          <Route  path='/Home'  element={<Home/>}  />
+          <Route  path='/'  element={<Protected Component={Home} />}  />
+          {/* <Route  path='/'  element={<Home/>}  /> */}
+          <Route  path='/about'  element={<Protected Component={About} />}  />  
+          <Route  path='/Login'  element={<Login/>  }  />
           <Route  path='/Searchparamsss'  element={<Searchparamsss/> }  />
           <Route  path='/Contact/'  element={<Contact/> } >
             <Route path="Company" element={<Company/ >}/>
