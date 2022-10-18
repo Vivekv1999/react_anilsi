@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Component/Navbar';
+import Searchparamsss from './Component/L-53-searchparams/Searchparamsss';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from './Component/About';
+import Home from './Component/Home';
+import Contact from './Component/Contact';
+import Company from './Component/L-55-NestedROUTING/Company';
+import Otherbusi from './Component/L-55-NestedROUTING/Otherbusi';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route  path='/about'  element={<About/>}  />
+          <Route  path='/Home'  element={<Home/>}  />
+          <Route  path='/Searchparamsss'  element={<Searchparamsss/> }  />
+          <Route  path='/Contact/'  element={<Contact/> } >
+            <Route path="Company" element={<Company/ >}/>
+            <Route path="Otherbusi" element={<Otherbusi/ >}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
